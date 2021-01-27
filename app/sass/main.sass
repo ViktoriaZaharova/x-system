@@ -660,7 +660,7 @@ header
   overflow: hidden
   border-radius: 10px
   opacity: .5
-  margin: 0 43px
+  margin: 0 40px
   img
     @include img-100
 
@@ -946,6 +946,72 @@ header
 
 .main-category-box3
   background: linear-gradient(42.42deg, #318CDB -85.21%, #77D8EE 73.87%)
+
+//category-section-two
+.category-section-two
+  padding: 0
+  background: linear-gradient(104.27deg, #492B61 -1.8%, #9358C2 79.71%), linear-gradient(102.67deg, #318CDB 2.91%, #77D8EE 97.34%), #C4C4C4
+  .category-section__img
+    margin: -56px -450px 0 -150px
+    max-width: 1600px
+    height: 650px
+    overflow: hidden
+
+
+.score
+  padding: 109px 0 0
+  h2
+    margin: 0 0 30px
+    font-size: 36px
+    font-weight: 500
+    position: relative
+    z-index: 1
+    max-width: 780px
+    width: 100%
+
+.score-wrapper
+  width: 100%
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+  flex-wrap: wrap
+
+.score-image
+  position: relative
+  max-width: 422px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 -120px 0 -100px
+  &:before
+    content: ''
+    position: absolute
+    width: 679px
+    height: 554px
+    top: -133px
+    left: -143px
+    background: radial-gradient(55.44% 53.07% at 49.93% 53.16%, rgba(33, 33, 33, 0.75) 0%, #212121 100%), url('../img/bg24.png') no-repeat center
+      size: cover
+  img
+    position: relative
+    z-index: 1
+
+.score-content
+  width: calc(100% - 422px)
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  position: relative
+  z-index: 1
+  .box-text
+    width: 100%
+    max-width: 360px
+    margin: 0 0 60px
+    &:last-child
+      margin: 0 0 0 auto
+
+
 
 @import "media"
 // Всегда в конце

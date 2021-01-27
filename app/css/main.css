@@ -807,7 +807,7 @@ header {
   overflow: hidden;
   border-radius: 10px;
   opacity: .5;
-  margin: 0 43px; }
+  margin: 0 40px; }
   .design-slider-box img {
     width: 100%;
     height: 100%;
@@ -1174,6 +1174,88 @@ header {
 .main-category-box3 {
   background: linear-gradient(42.42deg, #318CDB -85.21%, #77D8EE 73.87%); }
 
+.category-section-two {
+  padding: 0;
+  background: linear-gradient(104.27deg, #492B61 -1.8%, #9358C2 79.71%), linear-gradient(102.67deg, #318CDB 2.91%, #77D8EE 97.34%), #C4C4C4; }
+  .category-section-two .category-section__img {
+    margin: -56px -450px 0 -150px;
+    max-width: 1600px;
+    height: 650px;
+    overflow: hidden; }
+
+.score {
+  padding: 109px 0 0; }
+  .score h2 {
+    margin: 0 0 30px;
+    font-size: 36px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    width: 100%; }
+
+.score-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.score-image {
+  position: relative;
+  max-width: 422px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 -120px 0 -100px; }
+  .score-image:before {
+    content: '';
+    position: absolute;
+    width: 679px;
+    height: 554px;
+    top: -133px;
+    left: -143px;
+    background: radial-gradient(55.44% 53.07% at 49.93% 53.16%, rgba(33, 33, 33, 0.75) 0%, #212121 100%), url("../img/bg24.png") no-repeat center;
+      background-size: cover; }
+  .score-image img {
+    position: relative;
+    z-index: 1; }
+
+.score-content {
+  width: calc(100% - 422px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  z-index: 1; }
+  .score-content .box-text {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 0 60px; }
+    .score-content .box-text:last-child {
+      margin: 0 0 0 auto; }
+
 @-webkit-keyframes move-bg {
   0% {
     -webkit-transform: translate(0);
@@ -1249,7 +1331,9 @@ header {
   .percent-section {
     padding: 50px 0; }
     .percent-section .btn {
-      margin: 40px auto 0; } }
+      margin: 40px auto 0; }
+  .category-section-two .category-section__img {
+    max-width: 900px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -1307,7 +1391,14 @@ header {
       margin: 30px auto 0; }
   .design-slider-box {
     width: 700px;
-    height: 350px; } }
+    height: 350px; }
+  .category-section-two .category-section__img {
+    max-width: 600px;
+    margin: -56px -250px 0 -50px; }
+  .category-section-two {
+    padding: 0; }
+  .score {
+    padding: 60px 0 0; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 920px) {
@@ -1363,7 +1454,34 @@ header {
     max-width: 200px;
     padding: 0; }
   .percent-content {
-    width: calc(100% - 200px); } }
+    width: calc(100% - 200px); }
+  .category-section-two .category-section__img {
+    margin: 0 auto;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 450px; }
+  .score-image {
+    margin: 0 auto; }
+    .score-image:before {
+      width: 550px;
+      height: 450px;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+  .score-content {
+    width: 100%; }
+    .score-content .box-text {
+      max-width: none;
+      margin: 0 0 20px; }
+  .score {
+    padding: 40px 0 0; }
+    .score h2 {
+      font-size: 26px;
+      max-width: none; }
+  .category-section-two {
+    padding: 30px 0 0; } }
 
 @media only screen and (max-width: 768px) {
   .menu {
@@ -1577,7 +1695,14 @@ header {
     max-width: 150px;
     margin: 0 auto 20px; }
     .percent .svg-icon {
-      height: 200px; } }
+      height: 200px; }
+  .category-section-two .category-section__img {
+    height: 350px; }
+  .score-image {
+    max-width: 300px; }
+    .score-image:before {
+      width: 400px;
+      height: 300px; } }
 
 @media only screen and (max-width: 480px) {
   h1 {

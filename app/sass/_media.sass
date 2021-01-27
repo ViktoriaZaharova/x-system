@@ -86,6 +86,9 @@
     .btn
       margin: 40px auto 0
 
+  .category-section-two .category-section__img
+    max-width: 900px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
   header
@@ -163,6 +166,16 @@
     width: 700px
     height: 350px
 
+  .category-section-two .category-section__img
+    max-width: 600px
+    margin: -56px -250px 0 -50px
+
+  .category-section-two
+    padding: 0
+
+  .score
+    padding: 60px 0 0
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 920px)
   h1
@@ -233,6 +246,34 @@
   .percent-content
     width: calc(100% - 200px)
 
+  .category-section-two .category-section__img
+    margin: 0 auto
+    align-items: flex-start
+    height: 450px
+
+  .score-image
+    margin: 0 auto
+    &:before
+      width: 550px
+      height: 450px
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+
+  .score-content
+    width: 100%
+    .box-text
+      max-width: none
+      margin: 0 0 20px
+
+  .score
+    padding: 40px 0 0
+    h2
+      font-size: 26px
+      max-width: none
+
+  .category-section-two
+    padding: 30px 0 0
 
 @media only screen and (max-width: 768px)
   .menu
@@ -499,6 +540,15 @@
     margin: 0 auto 20px
     .svg-icon
       height: 200px
+
+  .category-section-two .category-section__img
+    height: 350px
+
+  .score-image
+    max-width: 300px
+    &:before
+      width: 400px
+      height: 300px
 
 @media only screen and (max-width: 480px)
   h1
