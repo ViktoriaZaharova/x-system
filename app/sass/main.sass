@@ -1,0 +1,951 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #212121
+  color: #fff
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0
+  box-sizing: border-box
+  font-family: $default-font
+
+  &:hover, &:focus
+    outline: none
+
+.container
+  max-width: 1230px
+  width: 100%
+  margin: 0 auto
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  padding: 0 15px
+
+.align-items-center
+  align-items: center
+
+.align-items-stretch
+  align-items: stretch
+
+.justify-content-between
+  justify-content: space-between
+
+h1
+  width: 100%
+  font-size: 80px
+  font-weight: 500
+  line-height: 130%
+
+h2
+  font-size: 96px
+  width: 100%
+  font-weight: 600
+
+.row
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  margin: 0 -15px
+
+.col-6
+  width: 50%
+  padding: 0 15px
+
+.img-responsive
+  @include display-center-center
+
+  img
+    @include img-100
+
+.box-text
+  line-height: 170%
+  font-size: 18px
+
+  p
+    margin: 0 0 30px
+
+    &:last-child
+      margin: 0
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+  transition: .3s ease
+
+.w-100
+  width: 100%
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  font-family: $montserrat
+  height: 54px
+  width: 100%
+
+.btn-border
+  color: #fff
+  border: 2px solid #FFFFFF
+    radius: 5px
+
+  &:hover
+    background: #fff
+    color: $red
+
+
+//header
+header
+  padding: 66px 0 70px
+
+.logo
+  font-size: 25px
+  font-family: $font
+  letter-spacing: 0.11em
+  color: #fff
+
+  &:first-letter
+    color: $accent
+
+.btn-burger
+  display: none
+  width: 20px
+  cursor: pointer
+
+  span
+    width: 100%
+    height: 2px
+    margin: 0 0 4px
+    background: #ffff
+    display: block
+
+    &:last-child
+      margin: 0
+
+
+.menu
+  font-weight: 500
+  @include display-center
+
+  li
+    margin: 0 65px 0 0
+
+    &:last-child
+      margin: 0
+
+    a
+      color: #fff
+      border-bottom: 1px solid transparent
+      padding: 0 0 4px
+
+      &:hover
+        border-bottom-color: $red
+
+//.home
+.home
+  padding: 0 0 100px
+
+  .container
+    max-width: 1470px
+
+.home-slider
+  width: 100%
+  height: 600px
+
+.home-slider-box
+  position: relative
+  width: 100%
+  height: 100%
+  color: #fff
+  padding: 0 76px
+  overflow: hidden
+  @include display-center
+  justify-content: flex-start
+
+  .btn
+    max-width: 287px
+    margin: 42px 0 0
+
+  h4
+    font-size: 30px
+
+  > *:not(.text-slide__line)
+    position: relative
+    z-index: 1
+
+
+.home-slider-text
+  width: 100%
+  font-size: 18px
+  line-height: 170%
+
+.home-slider-box1
+  background: #B01C33
+  padding: 122px 75px 0
+  display: block
+
+.home-slider-box2
+  background: linear-gradient(102.67deg, #2E60B3 2.91%, #3D77D8 97.34%)
+
+  .home-slider-box__img
+    img
+      max-width: 503px
+
+.home-slider-box3
+  background: linear-gradient(102.78deg, #40BAD5 1.87%, #035AA6 100.37%)
+
+.home-slider-box4
+  background: linear-gradient(102.78deg, #492B61 1.87%, #9358C2 100.37%)
+
+  .home-slider-box__img
+    img
+      max-width: 526px
+
+.img-shadow
+  img
+    filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.4))
+    border-radius: 5px
+
+.text-slide
+  position: absolute
+  left: 0
+  top: 0
+  width: 100000%
+  height: 100%
+  background: url("../img/text-slide.svg") repeat-x
+    size: auto 60%
+    position-y: center
+  opacity: .5
+  animation:
+    fill-mode: forwards
+    timing-function: linear
+    duration: 100000s
+    iteration-count: infinite
+    play-state: running
+    name: move-bg
+
+.text-slide__line
+  width: 100%
+  position: absolute
+  height: 100%
+  top: 0
+  left: 0
+  overflow: hidden
+
+.home-slider-box__img
+  max-width: 643px
+  width: 100%
+  margin: 0 42px 0 0
+  @include display-center-center
+  img
+    width: 100%
+
+.home-slider-box__content
+  max-width: 488px
+  width: 100%
+
+.home-slider-title
+  font-size: 56px
+  font-weight: bold
+  margin: 0 0 20px
+
+
+//about
+.about
+  padding: 30px 0 54px
+
+  .box-text
+    color: rgba(#fff, .8)
+
+  h2
+    margin: 0 0 56px
+    font-size: 40px
+    font-weight: normal
+
+//about-numbers
+.about-numbers
+  padding: 33px 0 110px
+
+.about-numbers__box
+  position: relative
+  transition: .3s ease
+  background: #2C2C2C
+  width: 24%
+  height: 280px
+  color: #fff
+  padding: 32px 25px 30px
+  font-size: 17px
+  font-weight: bold
+  overflow: hidden
+  cursor: pointer
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    transition: .3s ease
+    z-index: 1
+
+  &:hover
+    box-shadow: 3.34308px 3.34308px 16.7154px #AB152D
+
+    &:before
+      background: rgba(#FF062D, .6)
+
+    .about-numbers__box-icon
+      .svg-icon
+        fill: #3D3A3A
+  @include display-column
+
+  h3
+    font-size: 54px
+    position: relative
+    font-family: $font-number
+    z-index: 1
+
+  p
+    text-transform: uppercase
+    margin: auto 0 0
+    z-index: 1
+    position: relative
+
+.about-numbers__box-icon
+  width: 157px
+  height: 166px
+  position: absolute
+  bottom: 22px
+  right: -30px
+
+  .svg-icon
+    fill: #3D3A3A
+
+//.command
+.command
+  padding: 56px 0 44px
+
+  h2
+    font-weight: normal
+    margin: 0 0 78px
+    font-size: 28px
+
+  h3
+    font-size: 36px
+    font-weight: bold
+
+//our-person
+.our-person
+  padding: 52px 0 81px
+
+  h2
+    text-align: center
+    font-size: 69px
+    text-transform: uppercase
+    color: #212121
+    font-weight: bold
+
+.our-person-item
+  background: #D5D5D5
+  padding: 98px 0 159px
+
+.our-person-wrapper
+  padding: 0 45px
+  margin: -113px 0 0
+  @include display-center-stretch
+
+.our-person__box
+  transition: .3s ease
+  cursor: pointer
+  width: 24%
+  height: 260px
+  background: #2C2C2C
+  color: #fff
+  font-size: 15px
+  font-weight: 500
+  padding: 10px 10px 12px 17px
+  @include display-column
+
+  h3
+    color: #D5D5D5
+    font-family: $font-number
+    font-weight: 500
+    font-size: 92px
+    transition: .3s ease
+
+  &:hover
+    box-shadow: 3.08307px 3.08307px 15.4153px #3A73D1
+
+    h3
+      color: #3A73D1
+
+.our-person__box-text
+  margin: auto 0 0
+  min-height: 56px
+
+//tabs
+.tabs__caption
+  width: 100%
+  color: #909090
+  font-size: 20px
+  @include display-center
+
+  li
+    margin: 0 60px 0 0
+    cursor: pointer
+    transition: .3s ease
+    &:last-child
+      margin: 0
+
+  .active
+    color: #fff
+    text-decoration: underline
+
+.tabs__content
+  display: none
+
+.tabs__content.active
+  display: flex
+  flex-wrap: wrap
+
+//.contacts
+.contacts
+  padding: 68px 0 50px
+
+  h2
+    margin: 0 0 44px
+
+  .tabs__content
+    align-items: flex-start
+    justify-content: space-between
+
+.contacts-box
+  margin: 34px 0 0
+  width: 30%
+  padding: 25px 0 0
+  border:
+    top: 1px solid #CDCDCD
+  color: #909090
+  font-size: 20px
+
+  h3
+    color: #fff
+    margin: 0 0 15px
+
+  p
+    margin: 0
+
+  .box-text
+    font-size: 20px
+
+.phone, .mail
+  color: #909090
+
+//footer
+.callback-wrapper
+  padding: 45px 0 70px
+  width: 100%
+  border:
+    top: 1px solid #CDCDCD
+  @include display-center
+
+  h3
+    margin: 0 auto 0 0
+    font-size: 48px
+    text-decoration: underline
+    font-weight: normal
+
+  .menu
+    font-weight: 600
+    font-size: 18px
+
+    li
+      margin: 0 44px 0 0
+
+      &:last-child
+        margin: 0
+
+      a
+        padding: 0
+
+//mobile-menu
+.mobile-menu
+  display: none
+  position: fixed
+  left: 0
+  top: 0
+  max-width: 300px
+  width: 100%
+  padding: 30px 20px
+  height: 100%
+  overflow-y: auto
+  z-index: 3
+  background: #212121
+  color: #fff
+  .logo
+    margin: 0 auto 20px
+    text-align: center
+  .menu
+    font-size: 16px
+    li
+      width: 100%
+      margin: 0 0 15px
+      &:last-child
+        margin: 0
+
+.btn-close
+  width: 20px
+  height: 20px
+  cursor: pointer
+  margin: 0 0 20px auto
+  position: relative
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 10px
+    top: 0
+    width: 2px
+    height: 100%
+    background: $accent
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
+
+.swiper-pagination-clickable .swiper-pagination-bullet
+  outline: none
+  
+.swiper-pagination-bullet-active
+  background: #fff
+
+//percent
+.percent-section
+  padding: 70px 0 110px
+  .container
+    align-items: center
+  .btn
+    margin: 207px auto 0
+    max-width: 287px
+
+.percent
+  max-width: 332px
+  width: 100%
+  padding: 0 0 0 50px
+  @include display-center-center
+  .svg-icon
+    width: 100%
+    height: 331px
+
+.percent-content
+  width: calc(100% - 332px)
+  padding: 0 75px 0 65px
+  font-size: 28px
+  font-weight: 500
+  line-height: 170%
+
+
+//design
+.design
+  padding: 110px 0
+  h2
+    font-size: 40px
+    font-weight: normal
+    margin: 0 0 67px
+  .btn
+    margin: 63px auto 0
+    max-width: 287px
+
+.design-slider
+  .swiper-slide-active
+    opacity: 1
+
+.design-slider-box
+  @include display-center-center
+  width: 972px
+  height: 484px
+  overflow: hidden
+  border-radius: 10px
+  opacity: .5
+  margin: 0 43px
+  img
+    @include img-100
+
+
+
+.slider-nav
+  width: 100%
+  @include display-center-center
+  margin: 40px auto 0
+  position: relative
+
+.swiper-pagination-fraction
+  font-size: 20px
+  font-family: $default-font
+  position: relative
+  transform: none
+  left: 0
+  top: 0
+  right: 0
+  width: fit-content
+  margin: 0 20px
+  .swiper-pagination-total
+    color: #BCBCBC
+
+.swiper-button-next, .swiper-button-prev
+  width: 30px
+  height: 12px
+  margin: 0
+  cursor: pointer
+  position: relative
+  transform: none
+  top: 0
+  left: 0
+  right: 0
+  outline: none
+  &:after
+    display: none
+  .svg-icon
+    stroke: #C9C9C9
+
+.swiper-button-next
+  order: 1
+
+.swiper-button-prev
+  order: -1
+
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled
+  opacity: 1
+
+//task
+.task
+  padding: 115px 0 0
+  margin: 40px 0 0
+  h2
+    margin: 0 0 10px
+    color: #ACACAC
+    font-size: 16px
+    font-weight: normal
+    text-transform: capitalize
+  h3
+    font-size: 28px
+    font-weight: 600
+    line-height: 170%
+
+.tasks-content
+  width: calc(100% - 310px)
+  padding: 0 0 0 98px
+
+.tasks-min
+  max-width: 310px
+  width: 100%
+  line-height: 170%
+
+//category-section
+.category-section
+  color: #fff
+  background: linear-gradient(102.67deg, #318CDB 2.91%, #77D8EE 97.34%), #C4C4C4
+  padding: 95px 0
+  overflow: hidden
+  h2
+    margin: 0 0 23px
+  .container
+    align-items: center
+
+.links
+  color: #fff
+  font-size: 14px
+  font-weight: bold
+  font-family: $gilroy
+  @include display-center
+  .svg-icon
+    width: 24px
+    height: 24px
+    margin: 0 0 0 16px
+    fill: #fff
+  .links-text
+    text-decoration: underline
+  &:hover
+    color: $red
+    .svg-icon
+      fill: $red
+
+.category-section__content
+  max-width: 739px
+  width: calc(100% - 620px)
+
+.category-section__img
+  max-width: 620px
+  width: 100%
+  margin: 0 -80px 0 80px
+
+//target
+.target
+  padding: 64px 0 110px
+  .btn
+    margin: 50px auto 0
+    max-width: 287px
+  h2
+    margin: 0 0 20px
+    font-size: 30px
+    font-weight: 600
+  .container
+    align-items: center
+
+.target-content
+  width: calc(100% - 570px)
+
+.target-images
+  max-width: 570px
+  width: 100%
+  @include  display-center-center
+
+.task-wrapper
+  @include display-center-stretch
+
+//signal-structure
+.signal-structure
+  padding: 120px 0 0
+  h2
+    font-size: 40px
+    font-weight: normal
+    margin: 0 0 30px
+  .tab-content
+    font-size: 20px
+    font-feature-settings: 'liga' off
+    font-weight: 600
+
+.tab-header
+  width: 100%
+  color: #929292
+  font-size: 20px
+  font-weight: 500
+  margin: 0 0 6px
+  @include display-center
+  li
+    margin: 0 39px 46px 0
+    cursor: pointer
+    transition: .3s ease
+    &:hover
+      color: #8DC6FF
+    &:last-child
+      margin: 0 0 46px
+  .active
+    color: #8DC6FF
+
+.signal-structure-wrapper
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+
+.signal-structure-content
+  width: calc(100% - 515px)
+  max-width: 502px
+  margin: 0 auto 0 0
+
+.signal-structure-images
+  width: 515px
+
+.task-box
+  width: 33%
+  background: #2C2C2C
+  color: #ffff
+  padding: 27px 10px 28px 17px
+  font-size: 18px
+  line-height: 170%
+  margin: 50px 0 0
+  h4
+    color: #909090
+    font-size: 24px
+    text-transform: capitalize
+    margin: 0 0 20px
+
+.js-tab-content
+  display: none
+
+.js-tab-content.active
+  display: flex
+  flex-wrap: wrap
+
+.tab-content__item-img
+  align-items: center
+  justify-content: center
+
+//category-section-one
+.category-section-one
+  background: url("../img/signal-bg.jpg") no-repeat center
+    size: cover
+  .category-section__img
+    max-width: 982px
+    margin: 0 -379px -129px 0
+
+//main-category
+.main-category
+  padding: 60px 0 110px
+  .container
+    justify-content: space-between
+    align-items: flex-start
+
+.main-category-box
+  position: relative
+  overflow: hidden
+  height: 460px
+  width: 30%
+  color: #fff
+  background: linear-gradient(42.42deg, #318CDB 26.13%, #77D8EE 185.74%)
+  display: flex
+  align-items: center
+  cursor: pointer
+  padding: 0 25px
+  &:hover
+    .main-category__content
+      display: flex
+
+.main-category__content
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background: rgba(#212121, .79)
+  padding: 10px 60px 10px 33px
+  font-size: 18px
+  font-weight: 500
+  transition: .3s ease
+  display: none
+  z-index: 1
+
+.main-category-box__title
+  font-size: 50px
+  font-weight: 600
+  color: #fff
+  padding: 0 0 8px
+  margin: 0 0 14px
+  border-bottom: 1px solid #45A2E0
+
+
+.main-category-box__subtext
+  position: absolute
+  padding: 16px 19px
+  bottom: 0
+  left: 0
+  font-size: 14px
+  font-weight: 500
+
+.main-category-box1
+  padding: 0
+  .main-category-box__img
+    max-width: 550px
+    width: 100%
+    margin: 0 0 0 38px
+    img
+      width: 100%
+      filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.4))
+      border-radius: 5px
+
+
+.main-category-box2
+  background: linear-gradient(42.42deg, #318CDB -27.52%, #77D8EE 131.76%)
+
+.main-category-box3
+  background: linear-gradient(42.42deg, #318CDB -85.21%, #77D8EE 73.87%)
+
+@import "media"
+// Всегда в конце
