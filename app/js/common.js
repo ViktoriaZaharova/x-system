@@ -10,7 +10,7 @@ var swiper = new Swiper('.home-slider', {
     direction: 'vertical',
     effect: 'cube',
     grabCursor: true,
-    mousewheel: {releaseOnEdges: true},
+    mousewheel: true,
     speed: 750,
     cubeEffect: {
         shadow: false,
