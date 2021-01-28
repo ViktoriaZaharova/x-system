@@ -10,7 +10,7 @@ var swiper = new Swiper('.home-slider', {
     direction: 'vertical',
     effect: 'cube',
     grabCursor: true,
-    mousewheel: true,
+    mousewheel: {releaseOnEdges: true},
     speed: 750,
     cubeEffect: {
         shadow: false,
@@ -83,4 +83,9 @@ $(".js-tab-trigger").on("click", function () {
 
     $('.js-tab-content.active').removeClass('active'); // 3
     content.addClass('active'); // 4
+});
+
+// dropdown
+$('.dropItem').on("click", function () {
+    $(this).find('.dropDown-menu').fadeToggle();
 });

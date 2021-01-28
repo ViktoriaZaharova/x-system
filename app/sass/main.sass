@@ -186,10 +186,74 @@ h2
     background: #fff
     color: $red
 
+.dropItem
+  position: relative
+  display: flex
+  align-items: center
+  cursor: pointer
+  flex-wrap: wrap
+  >a
+    position: relative
+    display: flex
+    align-items: center
+    color: #fff
+    font-size: 14px
+    font-weight: 500
+    &:after
+      content: ''
+      margin: 4px 0 0 4px
+      width: 0
+      height: 0
+      border-left: 4px solid transparent
+      border-right: 4px solid transparent
+      border-top: 5px solid #fff
+
+.dropDown-menu
+  position: absolute
+  display: none
+  right: 0
+  background: #2F3545
+  padding: 15px 30px
+  z-index: 2
+  top: 22px
+  min-width: 100%
+  a
+    margin: 0 0 20px
+    display: flex
+    position: relative
+    z-index: 1
+    align-items: center
+    color: #9B9EA8
+    font-size: 14px
+    font-weight: 500
+    &:hover
+      color: #fff
+    &:last-child
+      margin: 0
+
+.header-item__icon
+  margin: 0 3px 0 0
+  width: 24px
+  height: 16px
+  border-radius: 2px
+  overflow: hidden
+  @include display-center-center
+
+.main-error__img
+  margin: 0 auto 20px
+
+.main-moved
+  text-align: center
+  margin: 0 0 40px
+  .btn
+    margin: 20px auto
+    max-width: 287px
 
 //header
 header
   padding: 66px 0 70px
+  .menu
+    margin: 0 60px 0 auto
 
 .logo
   font-size: 25px
@@ -543,13 +607,14 @@ header
     top: 1px solid #CDCDCD
   @include display-center
 
-  h3
-    margin: 0 auto 0 0
-    font-size: 48px
-    text-decoration: underline
-    font-weight: normal
+  //h3
+  //  margin: 0 auto 0 0
+  //  font-size: 48px
+  //  text-decoration: underline
+  //  font-weight: normal
 
   .menu
+    margin: 0 0 0 auto
     font-weight: 600
     font-size: 18px
 
@@ -867,11 +932,19 @@ header
 
 //category-section-one
 .category-section-one
+  padding: 139px 0 40px
   background: url("../img/signal-bg.jpg") no-repeat center
     size: cover
   .category-section__img
     max-width: 982px
     margin: 0 -379px -129px 0
+    img
+      filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.4))
+      border-radius: 5px
+  .container
+    align-items: flex-start
+  .category-section__content
+    margin: -30px 0 0
 
 //main-category
 .main-category
@@ -932,8 +1005,7 @@ header
 .main-category-box1
   padding: 0
   .main-category-box__img
-    max-width: 550px
-    width: 100%
+    min-width: 550px
     margin: 0 0 0 38px
     img
       width: 100%
