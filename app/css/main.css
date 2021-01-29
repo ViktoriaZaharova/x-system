@@ -326,22 +326,46 @@ h2 {
   top: 22px;
   min-width: 100%; }
   .dropDown-menu a {
-    margin: 0 0 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
-    z-index: 1;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    color: #9B9EA8;
-    font-size: 14px;
-    font-weight: 500; }
-    .dropDown-menu a:hover {
-      color: #fff; }
+    color: #fff;
+    margin: 0 0 20px; }
     .dropDown-menu a:last-child {
       margin: 0; }
+    .dropDown-menu a:hover {
+      color: #3A73D1; }
+
+.header-item {
+  margin: 0 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+  .header-item:after {
+    content: '';
+    margin: 4px 0 0 4px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #fff; }
+  .header-item:hover {
+    color: #3A73D1; }
+  .header-item:last-child {
+    margin: 0; }
 
 .header-item__icon {
   margin: 0 3px 0 0;
@@ -1145,7 +1169,12 @@ header {
     margin: 0 0 20px; }
 
 .js-tab-content {
-  display: none; }
+  display: none;
+  font-size: 20px;
+  font-weight: 500; }
+  .js-tab-content strong {
+    font-weight: 600;
+    display: inline-block; }
 
 .js-tab-content.active {
   display: -webkit-box;
@@ -1476,7 +1505,11 @@ header {
   .signal-structure-content {
     width: 100%;
     max-width: none;
-    margin: 0 auto 20px; }
+    margin: 0 auto 30px; }
+  .tab-header li {
+    margin-bottom: 20px; }
+    .tab-header li:last-child {
+      margin-bottom: 20px; }
   .signal-structure {
     padding: 60px 0 0; }
   .design {
@@ -1492,7 +1525,13 @@ header {
   .category-section-two {
     padding: 0; }
   .score {
-    padding: 60px 0 0; } }
+    padding: 60px 0 0; }
+  .tab-content__item-img img {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto; }
+  .js-tab-content {
+    font-size: 18px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 920px) {
@@ -1723,7 +1762,9 @@ header {
   .main-category-box1 .main-category-box__img {
     min-width: auto; }
   .language-box-dropdown {
-    margin: 0 15px 0 auto; } }
+    margin: 0 15px 0 auto; }
+  .js-tab-content {
+    font-size: 16px; } }
 
 @media only screen and (max-width: 575px) {
   .home-slider-box__content {

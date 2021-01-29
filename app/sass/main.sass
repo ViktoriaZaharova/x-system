@@ -218,18 +218,37 @@ h2
   top: 22px
   min-width: 100%
   a
-    margin: 0 0 20px
     display: flex
-    position: relative
-    z-index: 1
     align-items: center
-    color: #9B9EA8
-    font-size: 14px
-    font-weight: 500
-    &:hover
-      color: #fff
+    color: #fff
+    margin: 0 0 20px
     &:last-child
       margin: 0
+    &:hover
+      color: $accent
+
+.header-item
+  margin: 0 0 20px
+  display: flex
+  position: relative
+  z-index: 1
+  align-items: center
+  font-size: 14px
+  font-weight: 500
+  color: #fff
+  transition: .3s ease
+  &:after
+    content: ''
+    margin: 4px 0 0 4px
+    width: 0
+    height: 0
+    border-left: 4px solid transparent
+    border-right: 4px solid transparent
+    border-top: 5px solid #fff
+  &:hover
+    color: $accent
+  &:last-child
+    margin: 0
 
 .header-item__icon
   margin: 0 3px 0 0
@@ -919,8 +938,14 @@ header
     text-transform: capitalize
     margin: 0 0 20px
 
+
 .js-tab-content
   display: none
+  font-size: 20px
+  font-weight: 500
+  strong
+    font-weight: 600
+    display: inline-block
 
 .js-tab-content.active
   display: flex
@@ -929,6 +954,8 @@ header
 .tab-content__item-img
   align-items: center
   justify-content: center
+
+
 
 //category-section-one
 .category-section-one
